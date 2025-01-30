@@ -1,25 +1,33 @@
-# 🚜 ISO 23725:2024 Map Service API
+# Map Interface definition
+This section will explain the Map service requirements, use cases and specify the messaging format.
 
-This project implements a map service API that follows the ISO 23725:2024 standard for defining areas and road networks in mining environments. The service allows third-party software to query and consume map data with attributes such as `default_task`, `autonomy`, and `oneway`.
+### [Message specification](./specification/README.md)
+### [Message flow diagram](./diagram/README.md)
+### [State diagrams](./diagram/README.md)
 
-## 📌 Features
-- **Default Task Tagging**: Define the primary function of areas (`load`, `offload`, `supply`, etc.).
-- **Autonomy Attributes**: Indicate where autonomous and manned machines can operate.
-- **Structured Road Model**: Provides unambiguous routing and connectivity rules.
-- **RESTful API**: Supports JSON-based map service messaging.
+<br>
 
-## 📁 Project Structure
-- `api/`: Contains the API implementation, data models, and utilities.
-- `docs/`: Includes ISO 23725:2024 documentation and API references.
-- `examples/`: Provides sample map data and API requests.
-- `tests/`: Unit tests for ensuring API reliability.
+# Introduction
+This repo is dedicated to documenting the Map service, one of the services used in the open-autonomy family and also included in ISO23725
 
-## 🚀 Getting Started
+<br>
 
-### 1️⃣ Installation
-Clone the repository and install dependencies:
+# Map Service Purpose
+The map service handles maps in the interaction between AHS & FMS systems. 
 
-```sh
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-pip install -r requirements.txt
+<br>
+
+# Audience
+- Autonomy integrators ( typically miners )
+- Autonomous truck suppliers ( Engineering )
+- Fleet Management suppliers ( Engineering )
+
+<br>
+
+# What is a Map ?
+A map in a mine for autonomous trucks is a digital representation of the mining environment that defines roads, intersections, loading and dumping areas, and restricted zones. It enables the trucks to navigate safely, optimize routes, and interact with other equipment while following predefined operational rules.
+
+<br>
+
+# Format
+The map format that is used to share information is the Open Street Map (OSM) format (https://www.openstreetmap.org). 
