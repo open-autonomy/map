@@ -34,7 +34,33 @@ The map format that is used to share information is the Open Street Map (OSM) fo
 
 
 # General rules
-# Elements in Mapping
+## Map Object Concepts
+
+- A **map** consists of **roads** and **areas**.
+- A **road** is represented as a **line** where the start and end points are different.
+- An **area** is modeled as a **closed loop** where the first and last points are the same.
+- A **line** serves as a way element, defined by an ordered sequence of points.
+- A **point** is modeled as a node element.
+
+---
+
+## 10.2 Map Object Identification Rules and Restrictions
+
+Each map object must have a **unique identification number** within its category.  
+Object IDs remain **constant throughout their lifecycle**, even if attributes change.  
+A unique ID is assigned upon creation and only removed when the object is deleted.
+
+---
+
+## Table — Map Object ID Rules and Constraints
+
+| Object  | Restrictions |
+|---------|-------------|
+| `node id` | `0` is not allowed. Each node must have a **unique** identifier across all nodes within the map server. |
+| `way id` | `0` is not allowed. Each way must have a **unique** identifier across all ways within the map server. |
+| `user id` | `0` is not allowed. Each user must have a **unique** identifier across all registered users in the map system. |
+
+---
 
 ## Table: Attributes of a ‘Way’ Element
 
