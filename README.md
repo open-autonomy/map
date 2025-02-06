@@ -8,7 +8,7 @@ This section will explain the Map service requirements, use cases and specify th
 <br>
 
 # Introduction
-This repo is dedicated to documenting the Map service, one of the services used in the open-autonomy family and also included in ISO23725
+This repo is dedicated to documenting the Map service, one of the services used in the open-autonomy family
 
 <br>
 
