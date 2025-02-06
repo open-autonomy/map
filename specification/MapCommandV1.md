@@ -12,6 +12,8 @@
 | `Scope`  | shall     | string  | ´Summary`if summary is requested, ´/´if getAll is requested |
 
 
+
+
 ## Example of MapCommandV1 Summary
 ```json
 {
@@ -21,6 +23,20 @@
   "MapCommandV1": {
     "Method": "GET",
     "Scope": "/summary"
+  }
+}
+```
+
+
+## Example of MapCommandV1 Get All
+```json
+{
+  "Protocol": "Open-Autonomy",
+  "Version": 1,
+  "Timestamp": "2025-02-06T19:45:22.123Z",
+  "MapCommandV1": {
+    "Method": "GET",
+    "Scope": "/"
   }
 }
 
