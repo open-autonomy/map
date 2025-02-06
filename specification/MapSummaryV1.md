@@ -18,6 +18,7 @@
 | `WayCount`     | shall     | Integer  | The number of `<way />` objects (Roads or Area) |
 | `DocumentCount` | shall     | Integer  | The number of XML documents (map chunks) that will be sent when a full update is sent. |
 
+## Example of MapSummaryV1
 ```json
 {
   "Protocol": "Open-Autonomy",
