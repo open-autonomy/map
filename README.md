@@ -62,7 +62,7 @@ A unique ID is assigned upon creation and only removed when the object is delete
 
 ---
 
-# Identification Numbers in Map Updates
+# Identification Numbers in Maps
 
 ## Way Identification Numbers
 
@@ -251,8 +251,6 @@ The **name** attribute is the **primary identifier** used by people to reference
 
 All **roads and areas** named within the map authoring tool should be included in the **map document**. However, a name **does not need to be unique** across the map—it is common to assign the **same name to multiple objects**.  
 
----
-
 ###  Name Usage on Map Objects  
 
 | Object Type    | Description  |
@@ -271,7 +269,6 @@ The **default_task** attribute is primarily used when **third-party software** i
 
 This attribute acts as a **guideline** rather than a restriction—it does **not enforce or limit** the types of tasks that can be assigned to a machine in the area.  
 
----
 
 ###  Default Task Usage on Map Objects  
 
@@ -281,7 +278,6 @@ This attribute acts as a **guideline** rather than a restriction—it does **not
 | `way as road` | **Not Supported** |
 | `way as area` | **Supported** – Defines the primary mining purpose of an area. |
 
----
 
 ### Default Task Key Values  
 
@@ -305,8 +301,6 @@ The **autonomy** attribute is used by **third-party software** to determine whic
 
 When a **map service** covers both **autonomous** and **manned** areas, this attribute helps client applications distinguish where **autonomous machines** can be **dispatched without exceptions**.  
 
----
-
 ### Autonomy Usage on Map Objects  
 
 | Object Type    | Description  |
@@ -315,7 +309,6 @@ When a **map service** covers both **autonomous** and **manned** areas, this att
 | `way as road` | **Supported** – Can be used to indicate whether autonomous machines are allowed on a specific road. |
 | `way as area` | **Supported** – Can be used to specify whether autonomous machines are allowed to plan paths within a designated area. |
 
----
 
 ### Autonomy Key Values  
 
@@ -327,7 +320,7 @@ When a **map service** covers both **autonomous** and **manned** areas, this att
 
 ---
 
-##Tag with Attribute `k = 'autonomy:area'`
+## Tag with Attribute `k = 'autonomy:area'`
 
 ### Purpose  
 
@@ -335,7 +328,6 @@ The **autonomy:area** attribute is used by **third-party software** to define **
 
 These areas typically **overlap drivable surfaces**, but they **are not intended** to be directly navigable paths.  
 
----
 
 ### Autonomy: Area Usage on Map Objects  
 
@@ -345,7 +337,7 @@ These areas typically **overlap drivable surfaces**, but they **are not intended
 | `way as road` | **Not Supported** |
 | `way as area` | **Supported** – Defines whether a perimeter is an **inclusionary or exclusionary** boundary for autonomous machines. |
 
----
+
 
 ### Autonomy: Area Key Values  
 
@@ -367,8 +359,6 @@ The **oneway** attribute is used by **third-party software** to identify **lanes
   - **The first point is the entrance**  
   - **The last point is the exit**  
 
----
-
 ### Oneway Usage on Map Objects  
 
 | Object Type    | Description  |
@@ -377,7 +367,6 @@ The **oneway** attribute is used by **third-party software** to identify **lanes
 | `way as road` | **Supported** – Specifies if a road is intended for **one-way traffic**. |
 | `way as area` | **Not Supported** |
 
----
 
 ### Oneway Key Values  
 
@@ -385,7 +374,5 @@ The **oneway** attribute is used by **third-party software** to identify **lanes
 |--------------|-------------|
 | `yes`        | Indicates that **traffic flows in a single direction**, from the **first** to the **last point**. |
 | `no`         | Indicates that **traffic is bidirectional**. Roads are assumed to be bidirectional **unless explicitly tagged as one-way**. Omitting the `oneway` tag is equivalent to `<tag k='oneway' v='no'/>`. |
-| `reversible` | Roads that **switch direction periodically but infrequently**.  
-Example: A lane that changes direction **twice a day during rush hour**. |
-| `alternating` | Roads that **alternate direction frequently or continuously**.  
-Example: A **single-lane bridge** where traffic alternates between directions as needed. |
+| `reversible` | Roads that **switch direction periodically but infrequently**.  |
+| `alternating` | Roads that **alternate direction frequently or continuously**.  |
